@@ -1,0 +1,12 @@
+# Example metadata file for microbiome analysis
+# This file should be tab-separated with sample IDs and group information
+
+sample	treatment	age_days	birth_type	probiotic
+sample_1	preterm	7	cesarean	yes
+sample_2	preterm	7	cesarean	no
+sample_3	preterm	14	cesarean	yes
+sample_4	preterm	14	cesarean	no
+sample_5	fullterm	7	vaginal	no
+sample_6	fullterm	7	vaginal	no
+sample_7	fullterm	14	vaginal	no
+sample_8	fullterm	14	vaginal	no

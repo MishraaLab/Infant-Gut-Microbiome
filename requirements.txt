@@ -1,0 +1,22 @@
+# Python dependencies for long-read microbiome analysis
+
+# Core scientific libraries
+numpy>=1.21.0
+pandas>=1.3.0
+scipy>=1.7.0
+biopython>=1.79
+
+# Statistical analysis
+statsmodels>=0.13.0
+scikit-learn>=1.0.0
+
+# Visualization
+matplotlib>=3.4.0
+seaborn>=0.11.0
+
+# Optional bioinformatics tools (install separately or via conda)
+# NanoPlot - for long-read QC visualization
+# Kraken2 - for taxonomic classification
+# Bracken - for abundance estimation
+# Minimap2 - for alignment-based classification
+# kraken-biom - for BIOM format conversion
