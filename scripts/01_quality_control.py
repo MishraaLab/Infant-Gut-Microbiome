@@ -77,7 +77,10 @@ def filter_by_length(input_file, output_file, min_length=1000, max_length=None):
                     count_output += 1
     
     logger.info(f"Filtered {count_input} sequences -> {count_output} sequences")
-    logger.info(f"Retention rate: {count_output/count_input*100:.2f}%")
+    if count_input > 0:
+        logger.info(f"Retention rate: {count_output/count_input*100:.2f}%")
+    else:
+        logger.info("Retention rate: N/A (no input sequences)")
 
 
 def filter_by_quality(input_file, output_file, min_quality=10):
@@ -108,7 +111,10 @@ def filter_by_quality(input_file, output_file, min_quality=10):
                 count_output += 1
     
     logger.info(f"Filtered {count_input} sequences -> {count_output} sequences")
-    logger.info(f"Retention rate: {count_output/count_input*100:.2f}%")
+    if count_input > 0:
+        logger.info(f"Retention rate: {count_output/count_input*100:.2f}%")
+    else:
+        logger.info("Retention rate: N/A (no input sequences)")
 
 
 def generate_qc_report(input_file, output_file):

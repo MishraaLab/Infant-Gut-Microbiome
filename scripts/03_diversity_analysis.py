@@ -70,6 +70,9 @@ def calculate_shannon_diversity(abundance_vector):
     abundance_vector = np.array(abundance_vector)
     abundance_vector = abundance_vector[abundance_vector > 0]
     
+    if len(abundance_vector) == 0:
+        return 0
+    
     proportions = abundance_vector / abundance_vector.sum()
     shannon = -np.sum(proportions * np.log(proportions))
     
@@ -89,7 +92,13 @@ def calculate_simpson_diversity(abundance_vector):
     abundance_vector = np.array(abundance_vector)
     abundance_vector = abundance_vector[abundance_vector > 0]
     
+    if len(abundance_vector) == 0:
+        return 0
+    
     total = abundance_vector.sum()
+    if total == 0:
+        return 0
+    
     proportions = abundance_vector / total
     simpson = 1 - np.sum(proportions ** 2)
     

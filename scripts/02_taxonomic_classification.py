@@ -216,6 +216,7 @@ def main():
     )
     parser.add_argument(
         '--16s-db',
+        dest='s16_db',
         help='Path to 16S reference database (for minimap2 method)'
     )
     parser.add_argument(
