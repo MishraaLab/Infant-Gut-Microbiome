@@ -16,14 +16,20 @@ Infant-Gut-Microbiome/
 │   ├── 03_diversity_analysis.py      # Alpha/beta diversity calculations
 │   ├── 04_statistical_analysis.py    # Differential abundance and statistics
 │   ├── 05_visualization.py           # Generate plots and figures
-│   └── pipeline.py                   # Main integrated pipeline
+│   ├── pipeline.py                   # Main integrated pipeline
+│   └── utils.py                      # Utility functions
 ├── data/                             # Data directory
 │   ├── raw_data/                     # Raw sequencing data
 │   ├── processed_data/               # Processed/filtered data
-│   └── results/                      # Analysis results
+│   ├── results/                      # Analysis results
+│   ├── metadata.example.tsv          # Example metadata file
+│   └── README.md                     # Data directory documentation
 ├── docs/                             # Documentation
+│   └── GUIDE.md                      # Detailed analysis guide
 ├── config.example.ini                # Example configuration file
 ├── requirements.txt                  # Python dependencies
+├── quickstart.sh                     # Quick setup script
+├── .gitignore                        # Git ignore file
 └── README.md                         # This file
 ```
 
@@ -84,7 +90,20 @@ Infant-Gut-Microbiome/
   - [Minimap2](https://github.com/lh3/minimap2) - alignment-based classification
   - [NanoPlot](https://github.com/wdecoster/NanoPlot) - QC visualization
 
-### Install Python Dependencies
+### Quick Start (Recommended)
+
+```bash
+# Run the quick start script to set up everything automatically
+./quickstart.sh
+```
+
+The quickstart script will:
+- Create a virtual environment
+- Install Python dependencies
+- Check for external tools
+- Create a default configuration file
+
+### Manual Installation
 
 ```bash
 # Create a virtual environment (recommended)
